@@ -1,0 +1,24 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+img {
+  margin-right: 5px;
+}
+
+.menu-buttons {
+ color: #002d72 ;
+  mat-icon {
+    color: #002d72;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+a:hover, a:active {
+  color: rgb(231, 54, 54)
+}

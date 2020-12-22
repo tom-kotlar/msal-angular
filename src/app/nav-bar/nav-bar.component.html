@@ -1,0 +1,43 @@
+<mat-toolbar color="primary">
+      <img
+      width="40"
+      alt="Angular Logo"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+    />      
+
+    <a routerLink="/" class="navbar-brand"> My App Name</a>
+
+    <span class="example-spacer"></span>
+
+    <button *ngIf="authenticated" mat-icon-button aria-label="Example icon-button with home icon" routerLink="/"> 
+      <mat-icon>home</mat-icon>
+    </button>
+
+   <button *ngIf="!authenticated"  mat-raised-button  (click)="signIn()">
+      <mat-icon>login</mat-icon>
+      Log In
+    </button>
+
+    <button *ngIf="authenticated" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" xPosition="before" >
+      <button mat-menu-item class="menu-buttons" (click)="signOut()">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Log Out</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item   class="menu-buttons">
+        <mat-icon>perm_device_information</mat-icon>
+        <span> Version </span>
+      </button>
+      <button mat-menu-item  class="menu-buttons">
+        <mat-icon>handyman</mat-icon>
+        <span> Bulid </span>
+      </button>
+      <button mat-menu-item  class="menu-buttons">
+        <mat-icon>new_releases</mat-icon>
+        <span> Release </span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>

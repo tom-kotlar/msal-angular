@@ -1,0 +1,8 @@
+<div *ngFor="let alert of alertsService.alerts">
+    <mat-card (close)="close(alert)">
+      {{alert.message}}
+      <pre *ngIf="alert.debug"><code>{{alert.debug}}</code></pre>
+    </mat-card>
+  </div>
+
+  <!-- type="{{alert.type}}"  -->
