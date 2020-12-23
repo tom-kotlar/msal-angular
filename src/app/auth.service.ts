@@ -61,6 +61,7 @@ export class AuthService {
     if (result) {
       // Temporary to display token in an error box
       // this.alertsService.addSuccess('Token acquired', result.accessToken);
+      console.log(result, "result <---l")
       return result.accessToken;
     }
 
